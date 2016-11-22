@@ -17,7 +17,7 @@ class MyUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
 
-		VerticalLayout layout = new VerticalLayout()
+		/*VerticalLayout layout = new VerticalLayout()
 
         String homeLabel = Grails.i18n("default.home.label")
         Label label = new Label(homeLabel)
@@ -27,7 +27,7 @@ class MyUI extends UI {
         // List<User> users = Grails.get(UserService).getListOfUsers()
         //    for (User user : users) {
         //    	layout.addComponent(new Label(user.name))
-        // }
+        // }*/
 
 		setContent(new MainUi());
     }

@@ -16,7 +16,7 @@ class ReporteService {
      * @param format
      * @return
      */
-    def generarReporteSencillo(String param1, String param2, JasperExportFormat format) {
+    public ByteArrayOutputStream generarReporteSencillo(String param1, String param2, JasperExportFormat format) {
         String rutaReporte = "SimpleTest/TestReport"
 
         def parametros = ["param1"   : param1,
@@ -27,7 +27,7 @@ class ReporteService {
         def reporte = new JasperReportDef(name: rutaReporte, fileFormat: format, parameters: parametros )
 
         //generando el reporte.
-        def reporteGenerado = jasperService.generateReport(reporte);
+        ByteArrayOutputStream reporteGenerado = jasperService.generateReport(reporte);
 
         return reporteGenerado
     }

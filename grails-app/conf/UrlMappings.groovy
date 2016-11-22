@@ -9,5 +9,9 @@ class UrlMappings {
 
         "/"(view:"/index")
         "500"(view:'/error')*/
+
+		"/"(controller: 'descarga', action: 'main')
+
+        "/test/$action"(controller: 'descarga')
 	}
 }
